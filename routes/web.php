@@ -16,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ListingController::class , 'index']);
+Route::get('/', [ListingController::class, 'index']);
 
-Route::get('/listing/create', [ListingController::class , 'create']);
+Route::get('/listing/create', [ListingController::class, 'create']);
 
-Route::post('/listing', [ListingController::class , 'store']);
+Route::post('/listing', [ListingController::class, 'store']);
 
-Route::get('/listing/{listing}', [ListingController::class , 'show']);
+Route::get('/listing/{listing}/edit', [ListingController::class, 'edit']);
+
+Route::get('/listing/{listing}', [ListingController::class, 'show']);
